@@ -1,38 +1,482 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-bottom: 0em !important;
+}
+
+.container {
+  max-width: 1312px;
+  margin: 0 auto;
+  padding: 0 124px;
+  box-sizing: content-box;
+}
+
+.loginForm {
+  font-family: Inter;
+}
+
+.loginForm__left {
+  /* max-width: 832px; */
+  position: absolute;
+  background: #F4F4F4;
+  width: 45vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.loginForm__left img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 80px);
+  max-width: 752px;
+}
+
+.loginForm__header {
+  position: absolute;
+  z-index: 1;
+  padding: 40px;
+}
+
+.loginForm__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loginForm__header__close {
+  cursor: pointer;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background: #F4F4F4;
+  border: 1px solid #EDEDED;
+  border-radius: 50%;
+}
+
+.loginForm__header__close path {
+  transition: 0.3s all;
+}
+
+.loginForm__header__close {
+  transition: 0.3s all;
+}
+
+.loginForm__header__close:hover {
+  background: #2B2B2B;
+}
+
+.loginForm__header__close:hover {
+  border: none;
+}
+
+.loginForm__header__close:hover path {
+  fill: #fff;
+}
+
+.loginForm__header__close svg {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.loginForm__title {
+  color: #2B2B2B;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 130%;
+}
+
+.loginForm__input+.loginForm__input {
+  margin-top: 24px;
+}
+
+.loginForm__inputs__wrapper {
+  margin-top: 48px;
+}
+
+.loginForm__rememberForgetPassword__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.loginForm__rememberForgetPassword__forgoetPass {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4db663;
+}
+
+.loginForm__rememberForgetPassword__remeber .ant-checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.loginForm__rememberForgetPassword__remeber span {
+  color: #2b2b2b;
+  font-size: 16px;
+}
+
+.loginForm__rememberForgetPassword__remeber .ant-checkbox-inner {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.loginForm__rememberForgetPassword__remeber .ant-checkbox-checked .ant-checkbox-inner {
+  background: #4DB663;
+  border: none;
+}
+
+.loginForm__rememberForgetPassword__remeber .ant-checkbox-inner {
+  border: 1px solid #4DB663 !important;
+}
+
+.ant-checkbox-input:focus+.ant-checkbox-inner {
+  border-color: #4DB663 !important;
+}
+
+.ant-checkbox-checked::after {
+  border: none !important;
+}
+
+.loginForm__rememberForgetPassword__forgoetPass:hover {
+  color: #4db663;
+}
+
+.loginForm__button {
+  width: 100%;
+  height: 56px !important;
+  border-radius: 8px !important;
+}
+
+.loginForm__button+.loginForm__button {
+  margin-top: 16px;
+}
+
+/* .loginForm__input .ant-select-selector {
+  -moz-border-radius-topleft: 8px !important;
+  -webkit-border-top-left-radius: 8px !important;
+  border-top-left-radius: 8px !important;
+  -moz-border-radius-topright: 8px !important;
+  -webkit-border-top-right-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+} */
+
+/* .loginForm__input .ant-select-selector {
+  width: 100%;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+} */
+
+.loginForm__input {
+  width: 100%;
+}
+
+.loginForm__button.primary {
+  background: #4DB663;
+  color: #fff;
+  border: none;
+}
+
+.loginForm__button span {
+  font-size: 18px;
+}
+
+.loginForm__button.primary span {
+  font-weight: 600;
+}
+
+.loginForm__button.secondary {
+  color: #2B2B2B;
+  border: 2px solid #4DB663;
+}
+
+.loginForm__button.secondary span {
+  font-weight: 500;
+}
+
+.loginForm__button.primary:hover {
+  background: #4DB663;
+  color: #fff;
+}
+
+.loginForm__button__wrapper {
+  margin-top: 32px;
+}
+
+.loginForm__button.secondary:hover {
+  color: #2B2B2B;
+  border: 2px solid #4DB663;
+}
+
+.loginForm__wrapper {
+  width: 100%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.loginForm__right {
+  position: relative;
+  height: 100vh;
+}
+
+.formRow {
+  position: relative;
+}
+
+.selectOne__dropdown .selectOne__item .ant-select-item-option-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.loginForm__input .ant-select-arrow svg {
+  fill: #4DB663;
+}
+
+.selectOne__item__icon svg path {
+  opacity: 0;
+}
+
+.selectOne__dropdown .selectOne__item.ant-select-item-option-selected svg path {
+  opacity: 1;
+}
+
+.loginForm__title__subtitle {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #4f4f4f;
+}
+
+.loginForm__title__subtitle a {
+  display: inline-block;
+  color: #4db663;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 12px;
+}
+
+.loginForm__buttonFooterText {
+  margin-top: 24px;
+  text-align: center;
+  color: #4f4f4f;
+  font-family: Inter;
+  font-size: 16px;
+}
+
+.loginForm__buttonFooterText a {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4db663;
+}
+
+.selectOne__dropdown {
+  padding: 12px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.selectOne__dropdown .selectOne__item {
+  border-radius: 8px;
+}
+
+.selectOne__dropdown .selectOne__item.ant-select-item-option-active {
+  background: #F4F4F4 !important;
+}
+
+.selectOne__item+.selectOne__item {
+  margin-top: 2px;
+}
+
+.modal .ant-modal-content {
+  border-radius: 16px;
+}
+
+.modal .ant-modal-body {
+  padding: 40px 32px;
+}
+
+.modal__icon {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.modal .ant-modal {
+  max-width: 416px;
+}
+
+.modal__button {
+  width: 100%;
+  margin-top: 32px;
+  height: 56px;
+  border-radius: 8px;
+  border: 2px solid #4DB663 !important;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2b2b2b !important;
+} 
+
+.modal__content {
+  margin-top: 24px;
+}
+
+.modal__content__title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: #2b2b2b;
+}
+
+.modal__content__text {
+  margin-top: 16px;
+  color: #2b2b2b;
+  font-size: 16px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loginForm__left__img__container {
+  max-width: 800px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 1920px) {
+
+  .loginForm__title {
+    font-size: 32px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .loginForm__inputs__wrapper {
+    margin-top: 32px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container {
+    padding: 0 124px;
   }
+
+}
+
+@media (max-width: 1280px) {
+
+  .loginForm__left {
+    width: 45vw;
+  }
+
+  .container {
+    padding: 0 92px;
+  }
+
+  .loginForm__left__img {
+    width: 100% !important;
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+  .loginForm__left {
+    display: none;
+  }
+
+  .loginForm__right {
+    flex: 0 0 75% !important;
+    max-width: 75% !important;
+    margin-left: 12.5% !important;
+  }
+
+  .container {
+    padding: 0 40px;
+  }
+
+  .loginForm__wrapper {
+    transform: translate(-50%, 0);
+    top: 175px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .loginForm__right {
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  .loginForm__header {
+    padding: 24px;
+  }
+
+  .loginForm__wrapper {
+    top: 215px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .loginForm__header {
+    padding: 16px;
+  }
+
+  .loginForm__header__logo {
+    width: 153px;
+  }
+
+  .loginForm__input+.loginForm__input {
+    margin-top: 16px;
+  }
+
+  .loginForm__rememberForgetPassword__wrapper {
+    margin-top: 16px;
+  }
+
+  .loginForm__header__close {
+    width: 40px;
+    height: 40px;
+  }
+
+  .loginForm__rememberForgetPassword__remeber span {
+    font-size: 14px;
+  }
+
+  .loginForm__rememberForgetPassword__forgoetPass {
+    font-size: 14px;
+  }
+
+  .loginForm__button span {
+    font-size: 16px;
+  }
+
+  .loginForm__button {
+    height: 40px !important;
+  }
+
+  .loginForm__wrapper {
+    top: 121px;
+  }
+
 }
